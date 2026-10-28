@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر إنتاج | حاضنات البيض الذكية في ليبيا</title>
+    <meta name="description"
+        content="حاضنات بيض ذكية بأحجام مختلفة (10 إلى 400 بيضة) مع توصيل لجميع المدن الليبية. الدفع كاش عند الاستلام أو بالحوالة.">
+    <!-- أيقونة التبويب (إيموجي) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐣</text></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- أيقونات Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#1b4d3e',
+                            lightgreen: '#2e7d32',
+                            accentgreen: '#4caf50',
+                            gold: '#f57c00',
+                            lightgold: '#ffb74d',
+                            cream: '#fbfbfa',
+                            dark: '#132e25'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .badge-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .7;
+            }
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        section[id] {
+            scroll-margin-top: 5rem;
+        }
+
+        #printArea {
+            display: none;
+        }
+
+        @page {
+            size: 4in 6in;
+            margin: 0;
+        }
+
+        @media print {
+            body>*:not(#printArea) {
+                display: none !important;
+            }
+
+            #printArea {
+                display: block !important;
+            }
+
+            body {
+                background: #fff !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 antialiased selection:bg-brand-gold selection:text-white">
+
+    <noscript>
+        <div style="background:#b91c1c;color:#fff;text-align:center;padding:10px;font-weight:bold">
+            يرجى تفعيل JavaScript في المتصفح لإتمام الطلب.
+        </div>
+    </noscript>
+
+    <!-- ================== شريط الإعلان العلوي ================== -->
+    <div
+        class="bg-brand-green text-white text-xs md:text-sm py-2.5 px-4 text-center font-bold tracking-wide flex items-center justify-center gap-2">
+        <span class="bg-brand-gold text-white text-[10px] md:text-xs px-2 py-0.5 rounded-full uppercase">التوصيل
+            فقط</span>
+        <span>🚚 نوصلولك طلبك وين ما كنت في ليبيا! | الدفع نقدًا (كاش) أو عن طريق الحوالة</span>
+    </div>
+
+    <!-- ================== شريط التنقل ================== -->
+    <nav class="sticky top-0 z-40 glass-nav border-b border-emerald-900/10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div
+                        class="w-12 h-12 rounded-full bg-white shadow-md border-2 border-brand-green p-1 flex items-center justify-center overflow-hidden transition transform group-hover:scale-105">
+                        <svg viewBox="0 0 100 100" class="w-full h-full" aria-hidden="true">
+                            <circle cx="50" cy="50" r="48" fill="#ffffff" />
+                            <path
+                                d="M50,15 C30,15 20,40 20,65 C20,80 33,90 50,90 C67,90 80,80 80,65 C80,40 70,15 50,15 Z"
+                                fill="none" stroke="#132e25" stroke-width="5" />
+                            <path
+                                d="M50,25 C50,25 35,50 35,68 C35,76 41,82 50,82 C59,82 65,76 65,68 C65,50 50,25 50,25 Z"
+                                fill="#f8f9fa" />
+                            <path
+                                d="M48,50 C40,55 38,65 42,75 C45,78 50,80 50,80 C50,80 40,78 38,70 C36,62 44,54 48,50 Z"
+                                fill="#2e7d32" />
+                            <path
+                                d="M52,45 C60,50 63,60 60,70 C58,74 53,78 50,80 C50,80 58,75 59,68 C61,59 54,50 52,45 Z"
+                                fill="#1b4d3e" />
+                            <path d="M50,8 C53,16 60,20 62,25 C54,23 48,16 50,8 Z" fill="#ff9800" />
+                            <path d="M46,10 C42,18 35,21 32,25 C39,24 44,18 46,10 Z" fill="#ffb74d" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black text-brand-green tracking-tight block leading-none">متجر
+                            إنتاج</span>
+                        <span class="text-[11px] font-bold text-brand-gold tracking-wide">مستقبل أفضل لإنتاج
+                            الدواجن</span>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8 font-bold text-slate-700 text-sm">
+                    <a href="#hero" class="hover:text-brand-green transition">الرئيسية</a>
+                    <a href="#products" class="hover:text-brand-green transition">أنواع الحاضنات</a>
+                    <a href="#features" class="hover:text-brand-green transition">المميزات الذكية</a>
+                    <a href="#calculator"
+                        class="hover:text-brand-green transition text-brand-gold flex items-center gap-1">
+                        <i class="fa-solid fa-calculator"></i> حاسبة الأرباح
+                    </a>
+                    <a href="#faq" class="hover:text-brand-green transition">الأسئلة الشائعة</a>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/218931043657" target="_blank" rel="noopener"
+                        class="hidden sm:flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-xl shadow-sm transition text-sm">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span dir="ltr">0931043657</span>
+                    </a>
+                    <a href="#products"
+                        class="bg-brand-gold hover:bg-amber-600 text-white font-bold px-5 py-2.5 rounded-xl shadow-md transition text-sm">
+                        اطلب الآن
+                    </a>
+                    <button id="menuBtn" type="button" aria-label="القائمة" aria-expanded="false"
+                        class="md:hidden w-10 h-10 rounded-xl border border-slate-300 text-slate-700 flex items-center justify-center">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu"
+            class="hidden md:hidden border-t border-slate-200 bg-white px-4 py-3 space-y-1 font-bold text-sm text-slate-700">
+            <a href="#hero" class="block py-2">الرئيسية</a>
+            <a href="#products" class="block py-2">أنواع الحاضنات</a>
+            <a href="#features" class="block py-2">المميزات الذكية</a>
+            <a href="#calculator" class="block py-2 text-brand-gold">حاسبة الأرباح</a>
+            <a href="#faq" class="block py-2">الأسئلة الشائعة</a>
+        </div>
+    </nav>
+
+    <!-- ================== القسم الرئيسي (Hero) ================== -->
+    <section id="hero"
+        class="relative overflow-hidden bg-gradient-to-b from-emerald-950 via-brand-green to-emerald-900 text-white py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 text-center lg:text-right">
+                    <div
+                        class="inline-flex items-center gap-2 bg-emerald-800/80 border border-emerald-600/50 rounded-full px-4 py-1.5 text-xs font-bold text-amber-300 mb-6 shadow-inner">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 badge-pulse"></span>
+                        <span>🐣 ابدأ مشروعك من اليوم مع حضانات البيض الذكية! 🌿</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 tracking-tight">
+                        حضانات بيض بأحجام مختلفة <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-200">تناسب
+                            المبتدئين وأصحاب المشاريع</span>
+                    </h1>
+
+                    <p
+                        class="text-slate-200 text-base sm:text-lg mb-8 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        تفكر تبدأ مشروع تربية الدواجن أو تزيد إنتاجك؟ وفرنالك حضانات بيض بأعلى جودة ونسبة تفقيس تزيد عن
+                        <strong class="text-amber-300 font-bold">95%</strong> وبأسعار مميزة!
+                    </p>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10 text-xs sm:text-sm font-bold">
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/15 p-3 rounded-2xl text-center">
+                            <i class="fa-solid fa-award text-amber-400 text-xl mb-1 block"></i>
+                            <span>صناعة صينية ممتازة</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/15 p-3 rounded-2xl text-center">
+                            <i class="fa-solid fa-car-battery text-amber-400 text-xl mb-1 block"></i>
+                            <span>تشغيل ببطارية 12V</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/15 p-3 rounded-2xl text-center">
+                            <i class="fa-solid fa-droplet text-amber-400 text-xl mb-1 block"></i>
+                            <span>نظام تزويد بالمياه</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/15 p-3 rounded-2xl text-center">
+                            <i class="fa-solid fa-truck-fast text-amber-400 text-xl mb-1 block"></i>
+                            <span>توصيل لجميع المدن</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#products"
+                            class="w-full sm:w-auto bg-brand-gold hover:bg-amber-600 text-white font-extrabold px-8 py-4 rounded-2xl text-lg shadow-xl transition transform hover:-translate-y-0.5 text-center">
+                            اختر السعة المناسبة لك 👇
+                        </a>
+                        <a href="https://wa.me/218931043657?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AD%D8%B6%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A8%D9%8A%D8%B6"
+                            target="_blank" rel="noopener"
+                            class="w-full sm:w-auto border-2 border-emerald-400/40 hover:bg-white/10 text-white font-bold px-7 py-4 rounded-2xl text-base transition flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+                            <span>راسلنا على واتساب</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative">
+                    <div
+                        class="relative mx-auto max-w-md bg-emerald-900/60 p-4 rounded-3xl border border-emerald-500/30 shadow-2xl backdrop-blur-md text-center">
+                        <div
+                            class="absolute -top-4 -right-4 bg-brand-gold text-white font-black px-4 py-2 rounded-2xl shadow-lg border-2 border-white text-base rotate-3">
+                            تبدأ من 250 د.ل فقط!
+                        </div>
+                        <img src="1000024841.jpg" alt="حضانة بيض ذكية" width="600" height="600" loading="eager"
+                            class="w-full h-auto rounded-2xl shadow-md border border-slate-200"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x600/1b4d3e/ffffff?text=حضانة+بيض+ذكية';">
+                        <p class="mt-3 text-xs text-emerald-200 font-bold">نسبة تفقيس عالية تزيد عن 95% 🐥</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== قسم المنتجات ================== -->
+    <section id="products" class="py-16 lg:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span
+                    class="text-brand-gold font-extrabold text-xs tracking-wider uppercase bg-amber-100 px-3 py-1 rounded-full">الأسعار
+                    والأحجام المتوفرة</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-brand-dark mt-3 mb-3">🥚 اختار السعة اللي تناسبك</h2>
+                <p class="text-slate-600 text-sm sm:text-base">نوفر حضانات بيض بأحجام مختلفة تناسب جميع الاحتياجات
+                    بأسعار ممتازة جداً.</p>
+            </div>
+
+            <div
+                class="bg-amber-50 border-r-4 border-brand-gold p-4 rounded-2xl shadow-sm mb-12 text-xs sm:text-sm text-amber-900 flex items-start gap-3">
+                <i class="fa-solid fa-circle-exclamation text-brand-gold text-xl mt-0.5"></i>
+                <div>
+                    <strong class="font-bold block text-sm mb-1">تنبيه مهم:</strong>
+                    يُرجى العلم بأن السعة الفعلية للحاضنة قد تختلف عن سعتها الاستيعابية لبيض الدجاج، وذلك نظراً لاعتماد
+                    معايير القياس المتبعة من قبل المصنع في الصين.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- 1) حضانة 10 بيضات -->
+                <div
+                    class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="relative bg-slate-100 p-4 text-center">
+                        <span
+                            class="absolute top-3 right-3 bg-brand-green text-white text-[11px] font-bold px-2.5 py-1 rounded-full z-10">250
+                            د.ل</span>
+                        <img src="1000024841.jpg" alt="حضانة 10 بيضات" width="400" height="300" loading="lazy"
+                            class="w-full h-48 object-cover rounded-2xl shadow-inner"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x300/1b4d3e/ffffff?text=حضانة+10+بيضات';">
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-black text-slate-900 mb-2">🔹 حضانة 10 بيضات</h3>
+                            <ul class="text-xs space-y-1.5 text-slate-600 mb-4 font-medium">
+                                <li>✅ تحكم إلكتروني في الحرارة</li>
+                                <li>✅ نظام تزويد بالمياه للرطوبة</li>
+                                <li>✅ إمكانية التشغيل ببطارية السيارة</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="text-lg font-black text-brand-green mb-3">السعر: 250 د.ل</div>
+                            <button type="button" data-order data-name="حضانة 10 بيضات" data-price="250"
+                                data-capacity="10"
+                                class="w-full bg-brand-green hover:bg-emerald-900 text-white font-bold py-2.5 px-4 rounded-xl shadow transition">
+                                اطلب الآن 🛒
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2) حضانة 15 بيضة -->
+                <div
+                    class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="relative bg-slate-100 p-4 text-center">
+                        <span
+                            class="absolute top-3 right-3 bg-brand-green text-white text-[11px] font-bold px-2.5 py-1 rounded-full z-10">280
+                            د.ل</span>
+                        <img src="1000016213.jpg" alt="حضانة 15 بيضة" width="400" height="300" loading="lazy"
+                            class="w-full h-48 object-cover rounded-2xl shadow-inner"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x300/1b4d3e/ffffff?text=حضانة+15+بيضة';">
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-black text-slate-900 mb-2">🔹 حضانة 15 بيضة</h3>
+                            <ul class="text-xs space-y-1.5 text-slate-600 mb-4 font-medium">
+                                <li>✅ تحكم إلكتروني في الحرارة</li>
+                                <li>✅ نظام تزويد بالمياه للرطوبة</li>
+                                <li>✅ إمكانية التشغيل ببطارية السيارة</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="text-lg font-black text-brand-green mb-3">السعر: 280 د.ل</div>
+                            <button type="button" data-order data-name="حضانة 15 بيضة" data-price="280"
+                                data-capacity="15"
+                                class="w-full bg-brand-green hover:bg-emerald-900 text-white font-bold py-2.5 px-4 rounded-xl shadow transition">
+                                اطلب الآن 🛒
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3) حضانة 30 بيضة -->
+                <div
+                    class="bg-white rounded-3xl overflow-hidden border-2 border-brand-gold shadow-lg hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="bg-brand-gold text-white text-center text-xs font-black py-1">الأكثر طلباً🔥</div>
+                    <div class="relative bg-slate-100 p-4 text-center">
+                        <span
+                            class="absolute top-3 right-3 bg-brand-gold text-white text-[11px] font-bold px-2.5 py-1 rounded-full z-10">310
+                            د.ل</span>
+                        <img src="1000014495.jpg" alt="حضانة 30 بيضة" width="400" height="300" loading="lazy"
+                            class="w-full h-48 object-cover rounded-2xl shadow-inner"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x300/1b4d3e/ffffff?text=حضانة+30+بيضة';">
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-black text-slate-900 mb-2">🔹 حضانة 30 بيضة</h3>
+                            <ul class="text-xs space-y-1.5 text-slate-600 mb-4 font-medium">
+                                <li>✅ تحكم إلكتروني في الحرارة</li>
+                                <li>✅ نظام تزويد بالمياه للرطوبة</li>
+                                <li>✅ إمكانية التشغيل ببطارية السيارة</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="text-lg font-black text-brand-gold mb-3">السعر: 310 د.ل</div>
+                            <button type="button" data-order data-default data-name="حضانة 30 بيضة" data-price="310"
+                                data-capacity="30"
+                                class="w-full bg-brand-gold hover:bg-amber-600 text-white font-bold py-2.5 px-4 rounded-xl shadow transition">
+                                اطلب الآن 🛒
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4) حضانة 48 بيضة -->
+                <div
+                    class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="relative bg-slate-100 p-4 text-center">
+                        <span
+                            class="absolute top-3 right-3 bg-brand-green text-white text-[11px] font-bold px-2.5 py-1 rounded-full z-10">370
+                            د.ل</span>
+                        <img src="1000014496.jpg" alt="حضانة 48 بيضة" width="400" height="300" loading="lazy"
+                            class="w-full h-48 object-cover rounded-2xl shadow-inner"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x300/1b4d3e/ffffff?text=حضانة+48+بيضة';">
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-black text-slate-900 mb-2">🔹 حضانة 48 بيضة</h3>
+                            <ul class="text-xs space-y-1.5 text-slate-600 mb-4 font-medium">
+                                <li>✅ تحكم إلكتروني في الحرارة</li>
+                                <li>✅ نظام تزويد بالمياه للرطوبة</li>
+                                <li>✅ إمكانية التشغيل ببطارية السيارة</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="text-lg font-black text-brand-green mb-3">السعر: 370 د.ل</div>
+                            <button type="button" data-order data-name="حضانة 48 بيضة" data-price="370"
+                                data-capacity="48"
+                                class="w-full bg-brand-green hover:bg-emerald-900 text-white font-bold py-2.5 px-4 rounded-xl shadow transition">
+                                اطلب الآن 🛒
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5) حضانة 72 بيضة -->
+                <div
+                    class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="relative bg-slate-100 p-4 text-center">
+                        <span
+                            class="absolute top-3 right-3 bg-brand-green text-white text-[11px] font-bold px-2.5 py-1 rounded-full z-10">400
+                            د.ل</span>
+                        <img src="1000014497.jpg" alt="حضانة 72 بيضة" width="400" height="300" loading="lazy"
+                            class="w-full h-48 object-cover rounded-2xl shadow-inner"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x300/1b4d3e/ffffff?text=حضانة+72+بيضة';">
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-black text-slate-900 mb-2">🔹 حضانة 72 بيضة</h3>
+                            <ul class="text-xs space-y-1.5 text-slate-600 mb-4 font-medium">
+                                <li>✅ تحكم إلكتروني في الحرارة</li>
+                                <li>✅ نظام تزويد بالمياه للرطوبة</li>
+                                <li>✅ إمكانية التشغيل ببطارية السيارة</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="text-lg font-black text-brand-green mb-3">السعر: 400 د.ل</div>
+                            <button type="button" data-order data-name="حضانة 72 بيضة" data-price="400"
+                                data-capacity="72"
+                                class="w-full bg-brand-green hover:bg-emerald-900 text-white font-bold py-2.5 px-4 rounded-xl shadow transition">
+                                اطلب الآن 🛒
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6) حضانة 130 بيضة -->
+                <div
+                    class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition duration-300 flex flex-col">
+                    <div class="relative bg-slate-100 p-4 text-center">
+                        <span
+                            class="absolute top-3 right-3 bg-brand-green text-white text-[11px] font-bold px-2.5 py-1 rounded-full z-10">475
+                            د.ل</span>
+                        <img src="1000014500.jpg" alt="حضانة 130 بيضة" width="400" height="300" loading="lazy"
+                            class="w-full h-48 object-cover rounded-2xl shadow-inner"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x300/1b4d3e/ffffff?text=حضانة+130+بيضة';">
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-black text-slate-900 mb-2">🔹 حضانة 130 بيضة</h3>
+                            <ul class="text-xs space-y-1.5 text-slate-600 mb-4 font-medium">
+                                <li>✅ تحكم إلكتروني في الحرارة</li>
+                                <li>✅ نظام تزويد بالمياه للرطوبة</li>
+                                <li>✅ إمكانية التشغيل ببطارية السيارة</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="text-lg font-black text-brand-green mb-3">السعر: 475 د.ل</div>
+                            <button type="button" data-order data-name="حضانة 130 بيضة" data-price="475"
+                                data-capacity="130"
+                                class="w-full bg-brand-green hover:bg-emerald-900 text-white font-bold py-2.5 px-4 rounded-xl shadow transition">
+                                اطلب الآن 🛒
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7) حضانة 400 بيضة -->
+                <div
+                    class="bg-white rounded-3xl overflow-hidden border-2 border-emerald-600 shadow-xl hover:shadow-2xl transition duration-300 flex flex-col md:col-span-2 lg:col-span-2">
+                    <div class="bg-brand-green text-white text-center text-xs font-black py-1">سعة كبيرة للمشاريع 🏆
+                    </div>
+                    <div class="grid md:grid-cols-2 flex-1 p-4 gap-4 items-center">
+                        <div class="bg-slate-100 rounded-2xl overflow-hidden">
+                            <img src="1000022308.jpg" alt="حضانة 400 بيضة" width="400" height="300" loading="lazy"
+                                class="w-full h-56 object-cover shadow-inner"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x300/1b4d3e/ffffff?text=حضانة+400+بيضة';">
+                        </div>
+                        <div class="flex flex-col justify-between h-full py-2">
+                            <div>
+                                <h3 class="text-2xl font-black text-slate-900 mb-2">🔹 حضانة 400 بيضة الذكية</h3>
+                                <ul class="text-xs space-y-2 text-slate-700 mb-4 font-semibold">
+                                    <li>✅ صناعة صينية بجودة ممتازة</li>
+                                    <li>✅ تحكم إلكتروني في درجة الحرارة</li>
+                                    <li>✅ نظام تزويد بالمياه لتوفير الرطوبة اللازمة</li>
+                                    <li>✅ إمكانية التشغيل عن طريق بطارية السيارة</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-black text-brand-green mb-3">السعر: 1100 د.ل</div>
+                                <button type="button" data-order data-name="حضانة 400 بيضة" data-price="1100"
+                                    data-capacity="400"
+                                    class="w-full bg-brand-green hover:bg-emerald-900 text-white font-extrabold py-3 px-4 rounded-xl shadow-lg transition">
+                                    اطلب الآن 🛒
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== قسم المميزات ================== -->
+    <section id="features" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span
+                    class="text-brand-green font-bold text-xs uppercase bg-emerald-100 px-3 py-1 rounded-full">المميزات
+                    الرئيسية</span>
+                <h2 class="text-3xl font-black text-slate-900 mt-3 mb-2">✨ شن اللي يميز حضاناتنا؟</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div
+                        class="w-12 h-12 bg-brand-green text-amber-300 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">تحكم إلكتروني بالحرارة</h3>
+                    <p class="text-xs text-slate-600">شاشة ديجيتال ومستشعرات دقيقة لضبط وتثبيت درجة الحرارة المطلوبة
+                        تلقائياً.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div
+                        class="w-12 h-12 bg-brand-gold text-white rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">نظام تزويد مائي أوتوماتيكي</h3>
+                    <p class="text-xs text-slate-600">نظام خارجي متطور للمياه لتأمين نسبة الرطوبة اللازمة بدون الحاجة
+                        لفتح الحضانة.</p>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <div
+                        class="w-12 h-12 bg-brand-green text-amber-300 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-car-battery"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">تشغيل ببطارية السيارة (12V)</h3>
+                    <p class="text-xs text-slate-600">تتيح لك الاستمرار في تشغيل الحضانة عند انقطاع الكهرباء لحماية
+                        البيض من التلف.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== حاسبة الأرباح ================== -->
+    <section id="calculator" class="py-16 bg-gradient-to-b from-emerald-950 to-brand-dark text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="bg-amber-400 text-slate-900 font-black text-xs px-3 py-1 rounded-full uppercase">حاسبة
+                    الأرباح التفاعلية</span>
+                <h2 class="text-3xl font-black text-white mt-3 mb-2">احسب عائد مشروعك التقديري 📊</h2>
+                <p class="text-slate-200 text-xs sm:text-sm">اختر سعة الحضانة وتعرف على عدد الصيصان والأرباح التقديرية
+                    لدورة التفقيس الواحدة (21 يوماً)!</p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-white/15">
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-6 space-y-5">
+                        <div>
+                            <label for="calcIncubator" class="block text-xs font-bold text-amber-300 mb-2">اختر سعة
+                                الحضانة:</label>
+                            <select id="calcIncubator"
+                                class="w-full bg-slate-800 text-white border border-emerald-500 rounded-xl p-3 text-sm font-bold"></select>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-2">
+                                <label for="chickPrice">متوسط سعر بيع الصوص (عمر يوم):</label>
+                                <span id="chickPriceVal" class="text-amber-300 font-bold">6.5 د.ل</span>
+                            </div>
+                            <input type="range" id="chickPrice" min="4" max="12" step="0.5" value="6.5"
+                                class="w-full accent-amber-400">
+                        </div>
+                    </div>
+
+                    <div
+                        class="md:col-span-6 bg-emerald-950 p-6 rounded-2xl border border-amber-400/50 text-center space-y-4">
+                        <div class="border-b border-emerald-800 pb-3">
+                            <span class="text-xs text-slate-400 block mb-1">العدد المتوقع تفقيسه (نسبة 90%):</span>
+                            <span id="hatchedChicks" class="text-3xl font-black text-amber-300">0</span> <span
+                                class="text-xs text-amber-200">صوص</span>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 block mb-1">إجمالي عائد المبيعات التقديري:</span>
+                            <span id="totalRevenue" class="text-3xl font-black text-white">0</span> <span
+                                class="text-xs text-slate-300">د.ل</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== الأسئلة الشائعة ================== -->
+    <section id="faq" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-black text-center text-slate-900 mb-8">أسئلة تهمك 💬</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-2xl p-5 border border-slate-200">
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">كيف يتم الشحن والتسليم؟</h4>
+                    <p class="text-xs text-slate-600">نوفر خدمة التوصيل فقط لجميع المدن والمناطق الليبية، والدفع عند
+                        الاستلام كاش أو عن طريق الحوالة البنكية.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-5 border border-slate-200">
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">كيف يمكنني الطلب؟</h4>
+                    <p class="text-xs text-slate-600">اختر السعة المناسبة لك واضغط زر "اطلب الآن" لإدخال بياناتك،
+                        وسيصلنا طلبك فوراً ونتصل بك لتأكيد التوصيل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================== نافذة الطلب ================== -->
+    <div id="orderModal"
+        class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden items-start sm:items-center justify-center p-4 overflow-y-auto"
+        role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+        <div
+            class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200 relative my-4">
+            <div class="bg-brand-green text-white p-5 flex items-center justify-between">
+                <div>
+                    <h3 id="orderModalTitle" class="text-lg font-black">طلب حضانة البيض الذكية</h3>
+                    <p class="text-xs text-emerald-200">الدفع عند الاستلام (كاش) أو بالحوالة</p>
+                </div>
+                <button type="button" data-close-modal aria-label="إغلاق"
+                    class="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center text-white">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="orderForm" class="p-6 space-y-4" novalidate>
+                <div>
+                    <label for="selectedIncubator" class="block text-xs font-bold text-slate-700 mb-1">السعة
+                        المختارة:</label>
+                    <input type="text" id="selectedIncubator" readonly
+                        class="w-full bg-slate-100 text-brand-green font-extrabold border border-slate-300 rounded-xl p-3 text-sm">
+                    <input type="hidden" id="selectedPrice">
+                </div>
+
+                <div>
+                    <label for="custName" class="block text-xs font-bold text-slate-700 mb-1">الاسم الكامل *</label>
+                    <input type="text" id="custName" required minlength="3" maxlength="60" autocomplete="name"
+                        placeholder="أدخل اسمك"
+                        class="w-full border border-slate-300 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green">
+                </div>
+
+                <div>
+                    <label for="custPhone" class="block text-xs font-bold text-slate-700 mb-1">رقم الهاتف *</label>
+                    <input type="tel" id="custPhone" required dir="ltr" inputmode="tel" autocomplete="tel"
+                        placeholder="09X XXX XXXX"
+                        class="w-full border border-slate-300 rounded-xl p-3 text-sm text-right focus:outline-none focus:ring-2 focus:ring-brand-green">
+                    <p id="phoneError" class="hidden text-[11px] text-red-600 font-bold mt-1">أدخل رقماً ليبياً صحيحاً
+                        من 10 أرقام يبدأ بـ 091 أو 092 أو 093 أو 094</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label for="custCity" class="block text-xs font-bold text-slate-700 mb-1">المدينة *</label>
+                        <select id="custCity" required
+                            class="w-full border border-slate-300 rounded-xl p-3 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-green">
+                            <option value="" disabled selected>اختر المدينة</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="custArea" class="block text-xs font-bold text-slate-700 mb-1">المنطقة / أقرب نقطة
+                            دالة *</label>
+                        <input type="text" id="custArea" required maxlength="100"
+                            placeholder="مثال: عين زارة - قرب المسجد"
+                            class="w-full border border-slate-300 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-green">
+                    </div>
+                </div>
+
+                <div class="hidden" aria-hidden="true">
+                    <label>اترك هذا الحقل فارغاً <input type="text" id="hpField" tabindex="-1"
+                            autocomplete="off"></label>
+                </div>
+
+                <div>
+                    <span class="block text-xs font-bold text-slate-700 mb-1">طريقة الدفع:</span>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="flex items-center gap-2 border border-slate-200 p-3 rounded-xl cursor-pointer">
+                            <input type="radio" name="payMethod" value="كاش عند الاستلام" checked
+                                class="text-brand-green">
+                            <span class="text-xs font-bold">💵 نقدًا (كاش)</span>
+                        </label>
+                        <label class="flex items-center gap-2 border border-slate-200 p-3 rounded-xl cursor-pointer">
+                            <input type="radio" name="payMethod" value="حوالة بنكية" class="text-brand-green">
+                            <span class="text-xs font-bold">🏦 حوالة بنكية</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-amber-50 p-4 rounded-xl border border-amber-200 flex justify-between items-center text-sm font-bold text-amber-900">
+                    <span>إجمالي السعر:</span>
+                    <span id="modalTotalPrice" class="text-xl font-black text-brand-gold">0 د.ل</span>
+                </div>
+
+                <p id="formError"
+                    class="hidden text-xs text-red-600 font-bold bg-red-50 border border-red-200 rounded-xl p-3"></p>
+
+                <button type="submit" id="submitBtn"
+                    class="w-full bg-emerald-600 hover:bg-emerald-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-extrabold py-3.5 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-circle-check text-lg"></i>
+                    <span id="submitBtnText">تأكيد الطلب</span>
+                </button>
+
+                <button type="button" id="printFromFormBtn"
+                    class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2 px-4 rounded-xl text-xs flex items-center justify-center gap-2 border border-slate-300">
+                    <i class="fa-solid fa-print"></i>
+                    <span>طباعة بوليصة شحن حرارية (4x6)</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================== نافذة "شكراً لك" بعد الطلب ================== -->
+    <div id="successModal"
+        class="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 hidden items-start sm:items-center justify-center p-4 overflow-y-auto"
+        role="dialog" aria-modal="true" aria-labelledby="successTitle">
+        <div
+            class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-slate-200 my-4 text-center">
+            <div class="bg-brand-green text-white p-6">
+                <div class="text-5xl mb-2">✅</div>
+                <h3 id="successTitle" class="text-xl font-black">تم تسجيل طلبك بنجاح!</h3>
+                <p id="successSub" class="text-xs text-emerald-100 mt-1">سنتصل بك قريباً لتأكيد التوصيل</p>
+            </div>
+            <div class="p-6 space-y-4">
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-4 text-sm text-right space-y-1.5">
+                    <div class="flex justify-between"><span class="text-slate-500">رقم الطلب:</span><strong
+                            id="sOrderNo" dir="ltr"></strong></div>
+                    <div class="flex justify-between"><span class="text-slate-500">المنتج:</span><strong
+                            id="sProduct"></strong></div>
+                    <div class="flex justify-between"><span class="text-slate-500">الاسم:</span><strong
+                            id="sName"></strong></div>
+                    <div class="flex justify-between"><span class="text-slate-500">الهاتف:</span><strong id="sPhone"
+                            dir="ltr"></strong></div>
+                    <div class="flex justify-between"><span class="text-slate-500">العنوان:</span><strong
+                            id="sAddress"></strong></div>
+                    <div class="flex justify-between"><span class="text-slate-500">الدفع:</span><strong
+                            id="sPay"></strong></div>
+                    <div class="flex justify-between border-t border-slate-200 pt-2 mt-2"><span
+                            class="text-slate-500">الإجمالي:</span><strong id="sPrice"
+                            class="text-brand-gold text-lg"></strong></div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button type="button" id="printFromSuccessBtn"
+                        class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold py-2.5 rounded-xl text-xs border border-slate-300">
+                        <i class="fa-solid fa-print"></i> طباعة الفاتورة والبوليصة
+                    </button>
+                    <button type="button" data-close-modal
+                        class="flex-1 bg-brand-green hover:bg-emerald-900 text-white font-bold py-2.5 rounded-xl text-xs">
+                        إغلاق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================== البوليصة الحرارية ================== -->
+    <div id="printArea" class="p-4 bg-white text-black font-sans" dir="rtl">
+        <div
+            style="width: 4in; height: 6in; border: 2px solid black; padding: 10px; margin: auto; box-sizing: border-box;">
+            <div style="text-align: center; border-bottom: 2px solid black; padding-bottom: 8px; margin-bottom: 10px;">
+                <h2 style="font-size: 20px; font-weight: bold; margin: 0;">متجر إنتاج</h2>
+                <p style="font-size: 11px; margin: 2px 0;">intajstore.com | 0931043657</p>
+                <div
+                    style="font-size: 12px; font-weight: bold; border: 1px solid black; padding: 2px 6px; display: inline-block; margin-top: 4px;">
+                    بوليصة شحن / COD</div>
+            </div>
+
+            <div style="font-size: 13px; line-height: 1.6;">
+                <p style="margin: 4px 0;"><strong>رقم الطلب:</strong> <span id="pOrderNo" dir="ltr"></span></p>
+                <p style="margin: 4px 0;"><strong>اسم الزبون:</strong> <span id="pName"></span></p>
+                <p style="margin: 4px 0;"><strong>رقم الهاتف:</strong> <span id="pPhone" dir="ltr"></span></p>
+                <p style="margin: 4px 0;"><strong>العنوان/المدينة:</strong> <span id="pCity"></span></p>
+                <p style="margin: 4px 0;"><strong>المنتج المطلوب:</strong> <span id="pItem"></span></p>
+                <p style="margin: 4px 0;"><strong>طريقة الدفع:</strong> <span id="pPay"></span></p>
+                <div
+                    style="border-top: 2px solid black; margin-top: 10px; padding-top: 6px; font-size: 16px; font-weight: bold; display: flex; justify-content: space-between;">
+                    <span>المبلغ المطلوب:</span>
+                    <span id="pPrice"></span>
+                </div>
+            </div>
+
+            <div
+                style="margin-top: 25px; text-align: center; font-size: 10px; border-top: 1px dashed black; padding-top: 6px;">
+                شكراً لتسوقكم من متجر إنتاج! 🐣
+            </div>
+        </div>
+    </div>
+
+    <!-- ================== التذييل ================== -->
+    <footer class="bg-brand-dark text-white py-10 border-t border-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-slate-400">
+            <p class="mb-2">متجر إنتاج - حاضنات البيض الذكية في ليبيا 🇱🇾</p>
+            <p>للتواصل والطلب: <span dir="ltr">0931043657</span> | intajstore.com</p>
+        </div>
+    </footer>
+
+    <!-- ================== JavaScript ================== -->
+    <script>
+        'use strict';
+
+        const CONFIG = {
+            SUPABASE_URL: "https://imghkdajlqmgyycvsnqq.supabase.co",
+            SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImltZ2hrZGFqbHFtZ3l5Y3ZzbnFxIiwicm9sZSI6ImFub24iLCJpYXQiOjV9...", // ضع مفتاح anon الصحيح هنا
+            TELEGRAM_BOT_TOKEN: "9221605608:AAEG7JWzdR6mKtFpURfwi_hzSS5z7oovtY0",
+            TELEGRAM_CHAT_ID: "6310143854",
+            CURRENCY: 'د.ل'
+        };
+
+        const CITIES = [
+            'طرابلس', 'بنغازي', 'مصراتة', 'الزاوية', 'زليتن', 'الخمس', 'صبراتة', 'صرمان',
+            'غريان', 'ترهونة', 'بني وليد', 'مسلاتة', 'العجيلات', 'زوارة', 'جنزور', 'تاجوراء',
+            'سرت', 'اجدابيا', 'البريقة', 'المرج', 'البيضاء', 'شحات', 'درنة', 'طبرق',
+            'سبها', 'أوباري', 'مرزق', 'غات', 'الكفرة', 'الجفرة (هون)', 'نالوت', 'يفرن',
+            'جادو', 'الزنتان', 'الرجبان', 'أخرى'
+        ];
+
+        const $ = (id) => document.getElementById(id);
+        let lastOrder = null;
+        let isSubmitting = false;
+
+        function openModal(el) {
+            el.classList.remove('hidden');
+            el.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        }
+        function closeModal(el) {
+            el.classList.add('hidden');
+            el.classList.remove('flex');
+            if ($('orderModal').classList.contains('hidden') && $('successModal').classList.contains('hidden')) {
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        function normalizePhone(raw) {
+            let p = String(raw || '').replace(/[٠-٩]/g, (d) => '٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[^\d+]/g, '');
+            if (p.startsWith('+218')) p = '0' + p.slice(4);
+            else if (p.startsWith('00218')) p = '0' + p.slice(5);
+            else if (p.startsWith('218')) p = '0' + p.slice(3);
+            else if (/^9[1-4]\d{7}$/.test(p)) p = '0' + p;
+            return p;
+        }
+        const isValidLibyanPhone = (p) => /^09[1-4]\d{7}$/.test(p);
+        const formatPrice = (n) => Number(n) + ' ' + CONFIG.CURRENCY;
+
+        function buildCityOptions() {
+            const select = $('custCity');
+            CITIES.forEach((c) => {
+                const opt = document.createElement('option');
+                opt.value = c;
+                opt.textContent = c;
+                select.appendChild(opt);
+            });
+        }
+
+        function buildCalculatorOptions() {
+            const select = $('calcIncubator');
+            document.querySelectorAll('[data-order]').forEach((btn) => {
+                const opt = document.createElement('option');
+                opt.value = btn.dataset.capacity;
+                opt.textContent = `${btn.dataset.name} (${btn.dataset.price} ${CONFIG.CURRENCY})`;
+                if (btn.hasAttribute('data-default')) opt.selected = true;
+                select.appendChild(opt);
+            });
+        }
+
+        function calculateROI() {
+            const capacity = parseInt($('calcIncubator').value, 10) || 0;
+            const chickPrice = parseFloat($('chickPrice').value) || 0;
+            $('chickPriceVal').textContent = chickPrice + ' ' + CONFIG.CURRENCY;
+            const hatched = Math.floor(capacity * 0.90);
+            $('hatchedChicks').textContent = hatched;
+            $('totalRevenue').textContent = (hatched * chickPrice).toFixed(1);
+        }
+
+        function openOrderModal(productName, price) {
+            $('selectedIncubator').value = productName;
+            $('selectedPrice').value = price;
+            $('modalTotalPrice').textContent = formatPrice(price);
+            hideFormError();
+            openModal($('orderModal'));
+            setTimeout(() => $('custName').focus(), 50);
+        }
+
+        function showFormError(msg) {
+            const el = $('formError');
+            el.textContent = msg;
+            el.classList.remove('hidden');
+        }
+        function hideFormError() { $('formError').classList.add('hidden'); }
+
+        function collectOrder() {
+            hideFormError();
+            const name = $('custName').value.trim();
+            const phone = normalizePhone($('custPhone').value);
+            const city = $('custCity').value;
+            const area = $('custArea').value.trim();
+
+            if (name.length < 3) { showFormError('يرجى إدخال الاسم الكامل.'); $('custName').focus(); return null; }
+            if (!isValidLibyanPhone(phone)) {
+                $('phoneError').classList.remove('hidden');
+                $('custPhone').focus();
+                showFormError('رقم الهاتف غير صحيح.');
+                return null;
+            }
+            $('phoneError').classList.add('hidden');
+            if (!city) { showFormError('يرجى اختيار المدينة.'); $('custCity').focus(); return null; }
+            if (area.length < 2) { showFormError('يرجى كتابة المنطقة أو أقرب نقطة دالة.'); $('custArea').focus(); return null; }
+
+            return {
+                product: $('selectedIncubator').value,
+                price: Number($('selectedPrice').value),
+                name: name,
+                phone: phone,
+                city: city,
+                area: area,
+                pay_method: document.querySelector('input[name="payMethod"]:checked').value,
+                source: 'website',
+                status: 'new'
+            };
+        }
+        function showSuccess(order) {
+            lastOrder = order;
+            $('sOrderNo').textContent = order.order_no || '---';
+            $('sProduct').textContent = order.product;
+            $('sName').textContent = order.name;
+            $('sPhone').textContent = order.phone;
+            $('sAddress').textContent = `${order.city} - ${order.area}`;
+            $('sPay').textContent = order.pay_method;
+            $('sPrice').textContent = formatPrice(order.price);
+
+            closeModal($('orderModal'));
+            openModal($('successModal'));
+        }
+
+        async function saveOrderDirectly(order) {
+            const SUPABASE_URL = "https://imghkdajlqmgyycvsnqq.supabase.co";
+            const SUPABASE_ANON_KEY = "ضع_مفتاح_anon_الخاص_بك_هنا"; // استبدل هذا بمفتاح الـ anon الصحيح
+
+            const BOT_TOKEN = "9221605608:AAEG7JWzdR6mKtFpURfwi_hzSS5z7oovtY0";
+            const CHAT_ID = "6310143854";
+
+            try {
+                // 1) حفظ الطلب في Supabase مباشرة
+                const res = await fetch(`${SUPABASE_URL}/rest/v1/orders`, {
+                    method: 'POST',
+                    headers: {
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                        'Content-Type': 'application/json',
+                        'Prefer': 'return=representation'
+                    },
+                    body: JSON.stringify({
+                        product: order.product,
+                        price: order.price,
+                        name: order.name,
+                        phone: order.phone,
+                        city: order.city,
+                        area: order.area,
+                        pay_method: order.payMethod,
+                        source: 'website',
+                        status: 'new'
+                    })
+                });
+
+                if (!res.ok) {
+                    const errText = await res.text();
+                    console.error('Supabase Error:', errText);
+                    return false;
+                }
+
+                const rows = await res.json();
+                if (rows && rows[0] && rows[0].order_no) {
+                    order.orderNo = rows[0].order_no;
+                }
+
+                // 2) إرسال إشعار تلغرام الفوري
+                const text = `🔔 <b>طلب جديد ${order.orderNo}</b>\n` +
+                    `👤 الاسم: ${order.name}\n` +
+                    `📞 الهاتف: ${order.phone}\n` +
+                    `📦 المنتج: ${order.product} (${order.price} د.ل)\n` +
+                    `📍 العنوان: ${order.city} - ${order.area}\n` +
+                    `💳 الدفع: ${order.payMethod}`;
+
+                await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ chat_id: CHAT_ID, text: text, parse_mode: 'HTML' })
+                }).catch(e => console.error('Telegram error:', e));
+
+                return true;
+            } catch (err) {
+                console.error('Network or code error:', err);
+                return false;
+            }
+        }
+
+
+
+        async function handleOrderSubmit(e) {
+            e.preventDefault();
+            if (isSubmitting) return;
+            if ($('hpField').value) return;
+
+            const orderData = collectOrder();
+            if (!orderData) return;
+
+            isSubmitting = true;
+            $('submitBtn').disabled = true;
+            $('submitBtnText').textContent = 'جاري حفظ الطلب وإرسال الإشعار...';
+
+            try {
+                // 1) حفظ في Supabase
+                const savedOrder = await saveOrderDirectly(orderData);
+
+                // 2) إرسال إشعار Telegram
+                await notifyTelegram(savedOrder);
+
+                isSubmitting = false;
+                $('submitBtn').disabled = false;
+                $('submitBtnText').textContent = 'تأكيد الطلب';
+
+                showSuccess(savedOrder);
+                $('orderForm').reset();
+            } catch (err) {
+                console.error(err);
+                isSubmitting = false;
+                $('submitBtn').disabled = false;
+                $('submitBtnText').textContent = 'تأكيد الطلب';
+                showFormError('عذراً، حدث خطأ أثناء حفظ الطلب. يرجى المحاولة مرة أخرى.');
+            }
+        }
+
+        function printLabel(o) {
+            $('pOrderNo').textContent = o.order_no || '---';
+            $('pName').textContent = o.name;
+            $('pPhone').textContent = o.phone;
+            $('pCity').textContent = `${o.city} - ${o.area}`;
+            $('pItem').textContent = o.product;
+            $('pPay').textContent = o.pay_method;
+            $('pPrice').textContent = formatPrice(o.price);
+            window.print();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            buildCityOptions();
+            buildCalculatorOptions();
+            calculateROI();
+
+            document.querySelectorAll('[data-order]').forEach((btn) => {
+                btn.addEventListener('click', () => openOrderModal(btn.dataset.name, Number(btn.dataset.price)));
+            });
+
+            $('calcIncubator').addEventListener('change', calculateROI);
+            $('chickPrice').addEventListener('input', calculateROI);
+
+            $('orderForm').addEventListener('submit', handleOrderSubmit);
+            $('custPhone').addEventListener('input', () => $('phoneError').classList.add('hidden'));
+
+            $('printFromFormBtn').addEventListener('click', () => {
+                const order = collectOrder();
+                if (order) printLabel(order);
+            });
+            $('printFromSuccessBtn').addEventListener('click', () => { if (lastOrder) printLabel(lastOrder); });
+
+            document.querySelectorAll('[data-close-modal]').forEach((b) => {
+                b.addEventListener('click', () => { closeModal($('orderModal')); closeModal($('successModal')); });
+            });
+            ['orderModal', 'successModal'].forEach((id) => {
+                $(id).addEventListener('click', (ev) => { if (ev.target === $(id)) closeModal($(id)); });
+            });
+            document.addEventListener('keydown', (ev) => {
+                if (ev.key === 'Escape') { closeModal($('orderModal')); closeModal($('successModal')); }
+            });
+
+            const menuBtn = $('menuBtn'), mobileMenu = $('mobileMenu');
+            menuBtn.addEventListener('click', () => {
+                const open = mobileMenu.classList.toggle('hidden') === false;
+                menuBtn.setAttribute('aria-expanded', String(open));
+            });
+            mobileMenu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            }));
+        });
+    </script>
+</body>
+
+</html>
